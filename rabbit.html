@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: midnightblue;
+        }
+
+        .big {
+            margin: 50px auto;
+            width: 450px;
+            height: 550px;
+            border-image-source: url("border.png");
+            border-image-slice: 27 27 27 27;
+            border-image-width: 20px;
+            position: relative;
+            z-index: 2;
+            /*transform-style: preserve-3d;*/
+        }
+
+        .earLeft {
+            position: absolute;
+            left: 125px;
+            top: 41px;
+            width: 45px;
+            height: 170px;
+            box-shadow: inset 5px 10px 20px 5px gray, -2px 2px 10px 2px gray;
+            background-color: white;
+            border-radius: 35px 38px 34px 37px /46px 54px 100px 90px;
+            transform: rotate(-45deg);
+
+        }
+
+        .earRight {
+            position: absolute;
+            left: 264px;
+            top: 40px;
+            width: 45px;
+            height: 170px;
+            box-shadow: inset 2px 10px 20px 5px gray, 2px 2px 5px -5px gray;
+            background-color: white;
+            border-radius: 35px 38px 34px 37px /46px 54px 100px 90px;
+            transform: rotate(45deg);
+        }
+
+        .hand {
+            width: 250px;
+            height: 150px;
+            position: relative;
+            left: 95px;
+            top: 185px;
+            background-color: white;
+            box-shadow: inset 30px 4px 25px 7px gray, 7px 2px 31px 1px gray;
+            border-radius: 430px 430px 335px 335px /345px 345px 168px 168px;
+        }
+
+        .bowknot {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            left: 199px;
+            top: 17px;
+            background-color: #F94C16;
+            box-shadow: 1px;
+            border-radius: 40px;
+            border: solid 1px beige;
+        }
+
+        .bowknotL {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 153px;
+            top: -34px;
+            background-color: #F94C16;
+            box-shadow: 1px;
+            border-radius: 84px 110px 110px 90px /84px 60px 60px 83px;
+            transform: rotate(14deg);
+            border-top: solid 1px tomato;
+            border-left: solid 1px tomato;
+            border-bottom: solid 1px tomato;
+        }
+
+        .bowknotR {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 236px;
+            top: -86px;
+            background-color: #F94C16;
+            box-shadow: 1px;
+            border-radius: 110px 84px 90px 110px/60px 84px 83px 60px;
+            transform: rotate(-14deg);
+            border-top: solid 1px tomato;
+            border-right: solid 1px tomato;
+            border-bottom: solid 1px tomato;
+        }
+
+        .eyeR {
+            width: 40px;
+            height: 30px;
+            position: absolute;
+            left: 152px;
+            top: 59px;
+            border-bottom: solid 2px black;
+            box-shadow: 3px;
+            border-radius: 110px 84px 90px 110px/60px 84px 83px 60px
+        }
+
+        .eyeL {
+            width: 40px;
+            height: 30px;
+            position: absolute;
+            left: 56px;
+            top: 59px;
+            border-bottom: solid 2px black;
+            box-shadow: 3px;
+            border-radius: 84px 110px 110px 90px /84px 60px 60px 83px;
+        }
+
+        .zaftig {
+            width: 125px;
+            height: 85px;
+            position: relative;
+            left: 158px;
+            top: 39px;
+            background-color: white;
+            box-shadow: inset 12px 8px 20px 2px gray, 2px 5px 7px 1px gray;
+            border-radius: 30px 30px 35px 35px /3px 3px 68px 68px;
+        }
+
+        .xin1 {
+            position: absolute;
+            left: 35px;
+            top: 22px;
+            width: 30px;
+            height: 40px;
+            background-color: red;
+            border-radius: 30px 42px 12px 64px /30px 44px 54px 69px;
+        }
+
+        .xin2 {
+            position: absolute;
+            left: 59px;
+            top: 22px;
+            width: 30px;
+            height: 40px;
+            background-color: red;
+            border-radius: 42px 30px 64px 12px/44px 30px 69px 54px;
+        }
+
+        .armLeft {
+            position: absolute;
+            left: 131px;
+            top: 333px;
+            width: 25px;
+            height: 40px;
+            box-shadow: inset 2px 2px 5px 2px gray, 2px 2px 5px 5px gray;
+            background-color: white;
+            border-radius: 35px 38px 34px 37px /46px 54px 100px 90px;
+            transform: rotate(-141deg);
+        }
+
+        .armRight {
+            position: absolute;
+            left: 291px;
+            top: 333px;
+            width: 25px;
+            height: 40px;
+            box-shadow: inset 2px 2px 5px 2px gray, 2px 2px 5px 5px gray;
+            background-color: white;
+            border-radius: 35px 38px 34px 37px /46px 54px 100px 90px;
+            transform: rotate(-220deg);
+        }
+
+        .footLeft {
+            position: relative;
+            left: 197px;
+            top: 39px;
+            width: 15px;
+            height: 20px;
+            box-shadow: inset 2px 2px 5px 1px gray, 2px 2px 5px 2px gray;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        .footRight {
+            position: absolute;
+            left: 228px;
+            top: 415px;
+            width: 15px;
+            height: 20px;
+            box-shadow: inset 2px 2px 5px 1px gray, 2px 2px 5px 2px gray;
+            background-color: white;
+            border-radius: 15px;
+        }
+        .beimian {
+            width: 450px;
+            height: 550px;
+            border-image-source: url("border.png");
+            /*border: solid 1px white;*/
+            position: relative;
+            top: -605px;
+            left:446px;
+
+        }
+        .reverse {
+            width: 125px;
+            height: 85px;
+            position: relative;
+            left: 158px;
+            top: 185px;
+            background-color: white;
+            box-shadow: inset 12px 8px 20px 2px gray, 2px 5px 7px 1px gray;
+            border-radius: 30px 30px 35px 35px /3px 3px 68px 68px;
+        }
+        .footLeft1 {
+            position: relative;
+            left: 197px;
+            top: 175px;
+            width: 15px;
+            height: 20px;
+            box-shadow: inset 2px 2px 5px 1px gray, 2px 2px 5px 2px gray;
+            background-color: white;
+            border-radius: 15px;
+        }
+       
+
+    </style>
+</head>
+<body>
+<div class="big">
+    <div class="earLeft"></div>
+    <div class="earRight"></div>
+    <div class="hand">
+        <div class="eyeL"></div>
+        <div class="eyeR"></div>
+    </div>
+    <div class="bowknot"></div>
+    <div class="bowknotL"></div>
+    <div class="bowknotR"></div>
+    <div class="armLeft"></div>
+    <div class="armRight"></div>
+    <div class="zaftig">
+        <div class="xin1"></div>
+        <div class="xin2"></div>
+    </div>
+    <div class="footLeft"></div>
+    <div class="footRight"></div>
+</div>
+
+</body>
+</html>
